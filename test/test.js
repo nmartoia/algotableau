@@ -22,30 +22,19 @@ describe('algotableau', function(){
     assert.equal(moyen([]),NaN)
   });
 });
-//describe('algotableau', function(){
-//  it('should return 15', function(){
-//    assert.equal(nostring("15"),15)
-//  });
-//  it('should return NaN', function(){
-//    assert.equal(nostring("salut"),NaN)
-//  });
-//  it('should return 6', function(){
-//    assert.equal(nostring(6), 6)
-//  });
-//});
 describe('algotableau', function(){
-  it('should return [[1,3,5],[2,4,6]]', function(){
-    assert.equal(pair([1,2,3,4,5,6]),[
-      [
-        1,
-        3,
-        5
-      ],
-      [
-        2,
-        4,
-        6
-      ]
-    ])
+  it('should return 15', function(){
+    assert.equal(nostring("15"),15)
+  });
+  it('should return NaN', function(){
+    assert.equal(nostring("salut"),NaN)
+  });
+  it('should return 6', function(){
+    assert.equal(nostring(6), 6)
+  });
+});
+describe('algotableau', function(){
+  it('should return [[2,4,6],[1,3,5]]', function(){
+    assert.deepEqual(pair([1,2,3,4,5,6]),[[2,4,6],[1,3,5]])
   });
 });
