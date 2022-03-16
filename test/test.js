@@ -1,34 +1,22 @@
 import assert from 'assert';
-import { algotableau } from '../js/app.js';
-
-describe('Array', function () {
-  describe('#indexOf()', function () {
-    it('should return -1 when the value is not present', function () {
-      assert.equal([1, 2, 3].indexOf(4), -1);
-    });
+import { min } from '../js/app.js';
+import { moyen } from '../js/app.js';
+describe('algotableau', function(){
+  it('should return 0', function(){
+    assert.equal(min([1,2,3,4,5,6,7,8,9,0,1000,29374]),0)
+  });
+  it('should return -9', function(){
+    assert.equal(min([1,2,3,4,5,6,7,8,-9,0,1000,29374]),-9)
+  });
+  it('should return undifined', function(){
+    assert.equal(min([]),undefined)
   });
 });
-
 describe('algotableau', function(){
-  it('should return test_controller', function(){
-    assert.equal(algotableau([1,2,3,4,5,6,7,8,9,0,1000,29374]),0)
+  it('should return 15', function(){
+    assert.equal(moyen([10,20]),15)
   });
-  it('should return movie_and_book', function(){
-    assert.equal(algotableau([1,2,3,4,5,6,7,8,9,0,1000,29374]),2534.916666666667)
-  });
-  it('should return app7_test', function(){
-    assert.equal(algotableau(['7','2.6','8']),[7,2.6,8])
-  });
-  it('should return home', function(){
-    assert.equal(algotableau([1,2,3,4]),[1,3],[2,4] )
-  });
-  it('should return play-movie', function(){
-    assert.equal(algotableau([1,2,3,4,5,6,7,8,9][4,8,47]),[4,8] )
-  });
-  it('should return 1', function(){
-    assert.equal(algotableau([1,2,3,1,3,5,5,4,8]),[2,4,8] )
-  });
-  it('should return salut_les_mec', function(){
-    assert.equal(algotableau("mec"),1353 )
+  it('should return undifined', function(){
+    assert.equal(moyen([]),undefined)
   });
 });
