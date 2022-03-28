@@ -3,6 +3,7 @@ import { min } from '../js/app.js';
 import { moyen } from '../js/app.js';
 import { nostring } from '../js/app.js';
 import { pair } from '../js/app.js';
+import { doublon } from '../js/app.js';
 describe('algotableau', function(){
   it('should return 0', function(){
     assert.equal(min([1,2,3,4,5,6,7,8,9,0,1000,29374]),0)
@@ -36,5 +37,10 @@ describe('algotableau', function(){
 describe('algotableau', function(){
   it('should return [[2,4,6],[1,3,5]]', function(){
     assert.deepEqual(pair([1,2,3,4,5,6]),[[2,4,6],[1,3,5]])
+  });
+});
+describe('algotableau', function(){
+  it('should return [2,5]', function(){
+    assert.deepEqual(doublon([1,2,3,4,5,6],[5,39,2,8,9]),[2,5])
   });
 });

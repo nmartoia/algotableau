@@ -34,3 +34,13 @@ export const pair = (entry) => {
     }
     return tmp;
 }
+export const doublon = (tab1,tab2) => {
+    let t = [];
+    for (let i = 0; i < tab1.length; i++) {
+        if(tab2.includes(tab1[i])){
+            t.push(tab1[i])
+        }
+    }
+
+    return t;
+}
