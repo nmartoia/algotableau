@@ -19,7 +19,12 @@ export const moyen = (entry) => {
 
 }
 export const nostring = (entry) => {
-    let t=parseInt(entry)
+    let t=[]
+    for (let i = 0; i < entry.length; i++) {
+        if(typeof entry[i]=="number"){
+            t.push(entry[i])
+        }
+    }
     return t;
 }
 export const pair = (entry) => {
@@ -42,5 +47,14 @@ export const doublon = (tab1,tab2) => {
         }
     }
 
+    return t;
+}
+export const sansdoublons = (entry) => {
+    let t = [];
+    for (let i = 0; i < entry.length; i++) {
+        if(!(t.includes(entry[i]))){
+            t.push(entry[i])
+        }
+    }
     return t;
 }
